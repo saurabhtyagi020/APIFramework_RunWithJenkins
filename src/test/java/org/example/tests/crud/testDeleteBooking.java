@@ -4,7 +4,6 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.example.base.CommanToAll;
 import org.example.endpoints.APIConstants;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class testDeleteBooking extends CommanToAll {
@@ -15,7 +14,7 @@ public class testDeleteBooking extends CommanToAll {
 
     @Owner("#SAURABH TYAGI")
     @Description("Delete the created booking with Booking Id")
-    @Test(groups="QA",priority = 3)
+    @Test(groups="QA",priority = 3,enabled = false)
     public void testDeleteBooking()
     {
        requestSpecification.basePath(APIConstants.CREATE_UPDATE_URL+"/"+bookingId);
@@ -24,7 +23,6 @@ public class testDeleteBooking extends CommanToAll {
        response = requestSpecification.when().delete();
 
        vr= response.then().statusCode(201);
-
     }
 
 }

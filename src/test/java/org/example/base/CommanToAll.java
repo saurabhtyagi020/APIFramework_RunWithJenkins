@@ -31,4 +31,17 @@ public class CommanToAll {
        requestSpecification.contentType(ContentType.JSON).log().all();
 
     }
+
+    public String getToken()
+    {
+        requestSpecification.given().baseUri(APIConstants.BASE_URL).basePath(APIConstants.AUTH);
+        requestSpecification.contentType(ContentType.JSON).body(PayloadManager.createToken());
+
+        response = requestSpecification.when().post();
+
+        String token = PayloadManager.tokenResponse(response.asString());
+        return token;
+
+
+    }
 }

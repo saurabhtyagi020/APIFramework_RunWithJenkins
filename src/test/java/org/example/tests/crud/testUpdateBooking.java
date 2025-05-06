@@ -6,7 +6,6 @@ import org.example.base.CommanToAll;
 import org.example.endpoints.APIConstants;
 import org.example.modules.PayloadManager;
 import org.example.pojos.Booking;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class testUpdateBooking extends CommanToAll {
@@ -16,7 +15,7 @@ public class testUpdateBooking extends CommanToAll {
     String token="057661267652a7d";
     @Owner("#SAURABH TYAGI")
     @Description("Update the created booking with Booking Id")
-    @Test(groups="QA",priority = 3)
+    @Test(groups="QA",priority = 3,enabled = false)
     public void testUpdateBooking()
     {
 

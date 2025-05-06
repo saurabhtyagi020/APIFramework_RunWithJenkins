@@ -2,8 +2,6 @@ package org.example.tests.crud;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
-import io.restassured.RestAssured;
-import io.restassured.specification.RequestSpecification;
 import org.example.base.CommanToAll;
 import org.example.endpoints.APIConstants;
 import org.example.modules.PayloadManager;

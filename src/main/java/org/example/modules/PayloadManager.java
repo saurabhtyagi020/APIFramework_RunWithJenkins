@@ -1,9 +1,7 @@
 package org.example.modules;
 
 import com.google.gson.Gson;
-import org.example.pojos.Booking;
-import org.example.pojos.BookingResponse;
-import org.example.pojos.Bookingdates;
+import org.example.pojos.*;
 
 public class PayloadManager {
 
@@ -60,6 +58,24 @@ public class PayloadManager {
          gson = new Gson();
         Booking jsonbooking = gson.fromJson(response, Booking.class);
         return jsonbooking;
+    }
+
+    public static String createToken()
+    {
+        Auth auth = new Auth();
+        auth.setUsername("admin");
+        auth.setPassword("password123");
+
+        gson = new Gson();
+        String jsontoken =gson.toJson(auth);
+        return jsontoken;
+    }
+
+    public static String tokenResponse(String response)
+    {
+        gson = new Gson();
+        AuthResponse tokenresponse = gson.fromJson(response, AuthResponse.class);
+        return tokenresponse.getToken();
     }
 
 }
