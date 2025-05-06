@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/APIAutomation/APIFramework_RunWithJenkins">
+        <classes>
+            <class name="org.example.tests.crud.testCreateBooking">
+                <methods>
+                    <include name="testVerifyCreateBooking"/>
+                </methods>
+            </class>
+            <class name="org.example.tests.crud.testDeleteBooking">
+                <methods>
+                    <include name="testDeleteBooking"/>
+                </methods>
+            </class>
+            <class name="org.example.tests.crud.testUpdateBooking">
+                <methods>
+                    <include name="testUpdateBooking"/>
+                </methods>
+            </class>
+            <class name="org.example.tests.integration.E2E_Scenario">
+                <methods>
+                    <include name="testVerifyCreateBooking"/>
+                    <include name="testGETBooking"/>
+                    <include name="testUpdateBooking"/>
+                    <include name="testDeleteBooking"/>
+                </methods>
+            </class>
+            <class name="org.example.tests.sample.TestIntegrationSample">
+                <methods>
+                    <include name="testVerifyCreateBooking"/>
+                    <include name="testGETBooking"/>
+                    <include name="testUpdateBooking"/>
+                    <include name="testDeleteBooking"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
